@@ -2311,7 +2311,7 @@ a {
     .rdo {
         font-size: 13px;
         letter-spacing: -1px;
-    }
+    } 
 }
 
 .rdo input {
@@ -2334,6 +2334,10 @@ a {
     font-size: 14px;
     color: #999;
     font-family: 'SCDream-Regular', sans-serif;
+}
+
+@media (max-width: 360px) {
+    .rdo .sub{font-size: 12px;}
 }
 
 .rdo input:checked+i {
