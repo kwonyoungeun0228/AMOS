@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("../nav.html")
+  fetch("/nav.html")
     .then(res => res.text())
     .then(html => {
       const nav = document.createElement("div");
