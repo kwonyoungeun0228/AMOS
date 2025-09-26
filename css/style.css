@@ -856,6 +856,7 @@ a {
     padding: 16px;
     font-size: 16px;
     color: #999;
+    background: #fff;
 }
 
 .search-btn {
@@ -1835,7 +1836,6 @@ a {
 
 .cart-item .btn-trash img {
     width: 12px;
-    vertical-align: middle;
 }
 
 .cart-item .row.meta {
