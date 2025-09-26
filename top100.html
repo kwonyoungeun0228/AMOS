@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 공통 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='home.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">TOP100</h1>
+        </header>
+
+        <div class="container">
+            <!-- 상단 배너 자리 -->
+            <div class="new-banner" aria-label="TOP100 배너"><span>TOP100</span></div>
+
+            <section class="section" aria-labelledby="topTitle">
+                <h2 id="topTitle" class="sr-only">주간 TOP100</h2>
+
+                <!-- 상단 요약/액션 -->
+                <div class="top-bar">
+                    <p class="range">2025 WEEK36 TOP100</p>
+                    <button class="btn btn-primary detail btn-sm" type="button" aria-label="내 매장 TOP100 확인">내 매장 확인하기
+                        <svg class="caret" width="20" height="20" viewBox="0 0 30 23" aria-hidden="true">
+                            <path d="M8 5l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <hr class="divider" />
+
+                <!-- 표 -->
+                <div class="table-wrap">
+                    <table class="tbl-report tbl-top100" aria-label="주간 TOP100 상품">
+                        <thead>
+                            <tr>
+                                <th class="col-rank">금주<br>순위</th>
+                                <th class="col-rank">지난<br>순위</th>
+                                <th class="col-name">상품명</th>
+                                <th class="col-rate">비중</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 1 -->
+                            <tr>
+                                <td class="t-center">1</td>
+                                <td class="t-center">1</td>
+                                <td class="ellipsis">설곤약 황라맛(주황/18g)</td>
+                                <td class="t-right">0.25 %</td>
+                            </tr>
+                            <!-- 2 -->
+                            <tr>
+                                <td class="t-center">2</td>
+                                <td class="t-center">5</td>
+                                <td class="ellipsis">설곤약 황라맛(주황/18g)</td>
+                                <td class="t-right">0.25 %</td>
+                            </tr>
+                            <!-- 3 -->
+                            <tr>
+                                <td class="t-center">3</td>
+                                <td class="t-center">2</td>
+                                <td class="ellipsis">설곤약 황라맛(주황/18g)</td>
+                                <td class="t-right">0.25 %</td>
+                            </tr>
+
+                            <tr>
+                                <td class="t-center">4</td>
+                                <td class="t-center">6</td>
+                                <td class="ellipsis">설곤약 황라맛(주황/18g)</td>
+                                <td class="t-right">0.25 %</td>
+                            </tr>
+                            <tr>
+                                <td class="t-center">5</td>
+                                <td class="t-center">4</td>
+                                <td class="ellipsis">설곤약 황라맛(주황/18g)</td>
+                                <td class="t-right">0.25 %</td>
+                            </tr>
+                            <tr>
+                                <td class="t-center">6</td>
+                                <td class="t-center">3</td>
+                                <td class="ellipsis">설곤약 황라맛(주황/18g)</td>
+                                <td class="t-right">0.25 %</td>
+                            </tr>
+                            <tr>
+                                <td class="t-center">7</td>
+                                <td class="t-center">
+                                    <span class="badge-new" aria-label="NEW">N</span>
+                                </td>
+                                <td class="ellipsis">설곤약 황라맛(주황/18g)</td>
+                                <td class="t-right">0.25 %</td>
+                            </tr>
+                            <tr>
+                                <td class="t-center">8</td>
+                                <td class="t-center">7</td>
+                                <td class="ellipsis">설곤약 황라맛(주황/18g)</td>
+                                <td class="t-right">0.25 %</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

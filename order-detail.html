@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="history.back()">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">마이쇼핑</h1>
+        </header>
+
+        <div class="container">
+            <section class="section" aria-labelledby="odTitle">
+                <h2 id="odTitle" class="sr-only">주문상세</h2>
+
+                <!-- 주문번호 -->
+                <div class="od-orderno">
+                    <div>
+                        <p>주문번호 : </p>
+                        <p>90000123464519</p>
+                    </div>
+                    <div class="od-actions-right">
+                        <button class="btn btn-outline" type="button">주문취소</button>
+                    </div>
+                </div>
+
+                <!-- 주문상품정보 -->
+                <h3 class="co-title">주문상품정보</h3>
+                <div class="co-card co-items">
+                    <article class="co-item">
+                        <div class="thumb" aria-hidden="true"></div>
+                        <div class="meta">
+                            <p class="name">다회용 청결젤시(중/3호/201mm/10개입/중해)</p>
+                            <div class="row price">
+                                <strong class="num">2,000</strong><span class="unit">원</span>
+                                <span class="muted">개당 2,000원</span>
+                                <span class="muted">1개</span>
+                            </div>
+                            <p class="sku">
+                                <a href="#" class="link">813840</a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="co-item">
+                        <div class="thumb" aria-hidden="true"></div>
+                        <div class="meta">
+                            <p class="name">이어폰(RP-HV094/파나소닉)</p>
+                            <div class="row price">
+                                <strong class="num">5,200</strong><span class="unit">원</span>
+                                <span class="muted">개당 5,200원</span>
+                                <span class="muted">1개</span>
+                            </div>
+                            <p class="sku">
+                                <a href="#" class="link">232540</a>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <hr class="divider">
+
+                <!-- 받는 사람 -->
+                <h3 class="co-title">상품 받으시는 분</h3>
+                <div class="co-card">
+                    <ul class="co-kv">
+                        <li><span class="dt">수령자</span><span class="dd">김아름</span></li>
+                        <li><span class="dt">이메일</span><span class="dd">arum@arumnet.com</span></li>
+                        <li><span class="dt">휴대폰</span><span class="dd">010-1234-5678</span></li>
+                        <li><span class="dt">전화번호</span><span class="dd">02-1234-5678</span></li>
+                        <li class="multiline">
+                            <span class="dt">주소</span>
+                            <span class="dd">[08502] 서울 금천구 가산디지털1로 196<br>에이스테크노타워10차</span>
+                        </li>
+                        <li><span class="dt">메모</span><span class="dd">-</span></li>
+                    </ul>
+                </div>
+
+                <hr class="divider">
+
+                <!-- 결제정보 -->
+                <h3 class="co-title">결제정보</h3>
+                <div class="co-card">
+                    <ul class="co-kv">
+                        <li><span class="dt">주문금액</span><span class="dd">25,920원</span></li>
+                        <li><span class="dt">결제금액</span><span class="dd">0원</span></li>
+                        <li><span class="dt">사용포인트</span><span class="dd">0원</span></li>
+                        <li><span class="dt">결제방법</span><span class="dd">무통장 입금</span></li>
+                        <li class="multiline">
+                            <span class="dt">추가정보</span>
+                            <span class="dd">
+                                입금계좌정보 : 신한은행<br>
+                                계좌번호 : 123-456-7890<br>
+                                입금자명 : 김아름<br>
+                                입금예정일자 : 2025.07.31
+                            </span>
+                        </li>
+                        <li class="em">
+                            <span class="dt">주문상태</span><span class="dd">입금대기</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 하단 버튼 -->
+                <div class="co-actions">
+                    <button class="btn btn-primary detail" type="button"
+                        onclick="location.href='myshop.html'">목록보기</button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/board.css" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='home.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">공지사항</h1>
+        </header>
+
+        <div class="container">
+            <section class="section notice-wrap">
+                <ul class="list" role="list" aria-labelledby="noticeTitle">
+                    <h2 id="noticeTitle" class="sr-only">공지사항 목록</h2>
+
+                    <!-- item -->
+                    <li class="item">
+                        <a href="notice-detail.html">
+                            <div class="title-row">모바일상품권 정산 및 수수료율 변경 안내</div>
+                            <div class="meta-row">
+                                <span class="author">김아름</span>
+                                <time class="date" datetime="2025-09-09">2025.09.09</time>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="item">
+                        <a href="notice-detail.html">
+                            <div class="title-row">모바일상품권 정산 및 수수료율 변경 안내</div>
+                            <div class="meta-row">
+                                <span class="author">김아름</span>
+                                <time class="date" datetime="2025-09-09">2025.09.09</time>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="item">
+                        <a href="notice-detail.html">
+                            <div class="title-row">모바일상품권 정산 및 수수료율 변경 안내</div>
+                            <div class="meta-row">
+                                <span class="author">김아름</span>
+                                <time class="date" datetime="2025-09-09">2025.09.09</time>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="item">
+                        <a href="notice-detail.html">
+                            <div class="title-row">모바일상품권 정산 및 수수료율 변경 안내</div>
+                            <div class="meta-row">
+                                <span class="author">김아름</span>
+                                <time class="date" datetime="2025-09-09">2025.09.09</time>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="item">
+                        <a href="notice-detail.html">
+                            <div class="title-row">모바일상품권 정산 및 수수료율 변경 안내</div>
+                            <div class="meta-row">
+                                <span class="author">김아름</span>
+                                <time class="date" datetime="2025-09-09">2025.09.09</time>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 필요 개수만큼 반복 -->
+                </ul>
+
+                <!-- 페이지네이션 -->
+                <div class="paging">
+                    <a href="#" class="btn-paging btn-paging-prev"></a>
+                    <div class="num">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                    </div>
+                    <a href="#" class="btn-paging btn-paging-next"></a>
+                </div>
+
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

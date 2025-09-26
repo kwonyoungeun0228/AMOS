@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/board.css" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='notice.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">공지사항</h1>
+        </header>
+
+        <div class="container">
+            <section class="section notice-detail" aria-labelledby="ndTitle">
+                <h2 id="ndTitle" class="nd-title">모바일상품권 정산 및 수수료율 변경 안내</h2>
+
+                <dl class="nd-meta">
+                    <div class="row">
+                        <dt>작성자</dt>
+                        <dd>김아름</dd>
+                    </div>
+                    <div class="row">
+                        <dt>등록일</dt>
+                        <dd><time datetime="2025-09-01">2025-09-01</time></dd>
+                    </div>
+                    <div class="row file">
+                        <dt>첨부파일</dt>
+                        <dd>
+                            <a class="nd-file" href="#" download>가맹점 요청사항에 대한 공문.pdf</a>
+                        </dd>
+                    </div>
+                </dl>
+
+                <hr class="divider">
+
+                <h3 class="nd-subtitle">내용</h3>
+
+                <!-- 본문 박스 -->
+                <div class="nd-box" role="region" aria-label="공지 본문">
+                    <ol class="nd-list">
+                        <li>귀하의 건승과 귀 지점의 무궁한 발전을 기원합니다.</li>
+                        <li>
+                            본사는 최근 전문경영인 체제전환과 강화된 내부 경영방침을 토대로 하나씩 정책기준을 검토하고 있는 가운데,
+                            가맹점 상생을 최우선으로 검토하여 최근 가맹점 요청사항에 대한 의견을 수렴하기로 결정하였습니다.
+                            요청하신 사항에 대해서 중요도를 기준으로 점검하여 빠르면 10월 2일부로 아래 항목에 대하여 적용하도록 하겠습니다.
+                            하여, 상세내역에 대해 안내 드리며, 아울러 본사는 가맹점의 요청 사항에 대해서도 지속적으로 귀 기울이고 함께
+                            성장하도록 최선을 다하겠습니다.
+                        </li>
+                    </ol>
+
+                    <p class="nd-tail">[첨부] 가맹점 요청사항에 대한 공문 - 끝 -</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

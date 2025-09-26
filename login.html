@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/form.js"></script>
+    <style>
+        main {
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <div class="container">
+            <section class="login" role="form" aria-labelledby="loginTitle">
+                <h1 id="loginTitle" class="sr-only">AMOS 로그인</h1>
+
+                <!-- 로고 -->
+                <div class="logo">
+                    <img src="images/amos_logo.png" alt="AMOS 로고" />
+                </div>
+
+                <!-- 회사코드 -->
+                <div class="field">
+                    <label for="companyCode" class="label">회사코드</label>
+                    <input id="companyCode" type="text" class="input" placeholder="Enter Your COMPANY CODE"
+                        autocomplete="organization" autocapitalize="none" autocorrect="off" spellcheck="false">
+                    <label class="check">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span>회사코드 저장</span>
+                    </label>
+                </div>
+
+                <!-- 아이디 -->
+                <div class="field">
+                    <label for="userId" class="label">ID</label>
+                    <input id="userId" type="text" class="input" placeholder="Enter Your ID" autocomplete="organization"
+                        autocapitalize="none" autocorrect="off" spellcheck="false">
+                    <label class="check">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span>아이디 저장</span>
+                    </label>
+                </div>
+
+                <!-- 비밀번호 -->
+                <div class="field">
+                    <label for="userPw" class="label">Password</label>
+                    <input id="userPw" type="password" class="input" placeholder="Enter Your PW"
+                        autocomplete="organization" autocapitalize="none" autocorrect="off" spellcheck="false">
+                </div>
+
+                <!-- 버튼 -->
+                <div class="actions">
+                    <button class="btn btn-primary" type="button" onclick="location.href='home.html'">로그인</button>
+                    <button class="btn btn-deep" type="button">회원가입</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>

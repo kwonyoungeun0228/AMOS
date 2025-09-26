@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/board.css" />
+    <script src="js/common.js"></script>
+    <script src="js/board-tabs.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='home.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">주문</h1>
+        </header>
+
+        <div class="container">
+            <section class="section" aria-labelledby="orderTitle">
+                <h2 id="orderTitle" class="sr-only">주문 카탈로그</h2>
+
+                <p class="greet">김아름 체인점 환영합니다.</p>
+
+                <div class="order-filters">
+                    <div class="select-wrap select-wrap--overlay" data-select>
+                        <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                            <div class="tit"><span class="selected">전체상품</span></div>
+                            <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <!-- ↓ 이 패널이 아래로 겹쳐 뜨도록 바뀝니다 -->
+                        <div class="select-unfold" hidden>
+                            <div class="inner" role="listbox" aria-label="상품 범주 선택">
+                                <a href="#" role="option" data-value="전체상품" aria-selected="true">전체상품</a>
+                                <a href="#" role="option" data-value="전산용품"
+                                    onclick="location.href='order-category.html'">전산용품</a>
+                                <a href="#" role="option" data-value="생활용품">생활용품</a>
+                                <a href="#" role="option" data-value="사무용품">사무용품</a>
+                                <a href="#" role="option" data-value="필기류">필기류</a>
+                                <a href="#" role="option" data-value="아트메이트">아트메이트</a>
+                                <a href="#" role="option" data-value="화일/바인더">화일/바인더</a>
+                            </div>
+                        </div>
+                        <select class="select" aria-label="상품 범주 선택" name="category"> … </select>
+                    </div>
+
+                    <!-- 검색 -->
+                    <div class="search-wrap order-search">
+                        <input type="search" class="search" placeholder="검색" aria-label="상품 검색" />
+                        <button class="search-btn" type="button" aria-label="검색">
+                            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+                                <path d="M16.5 16.5L21 21" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- QR -->
+                    <button class="btn-qr" type="button" aria-label="바코드로 주문하기">
+                        <img src="images/qr-code.png" alt="" aria-hidden="true" />
+                        <span class="qr-label">바코드로<br>주문하기</span>
+                    </button>
+                </div>
+
+                <div class="seg-tabs seg-tabs--equal" role="tablist" aria-label="상품 보기">
+                    <button class="seg-btn is-active" role="tab" aria-selected="true" data-target="pane-catalog">카달로그
+                        상품</button>
+                    <button class="seg-btn" role="tab" aria-selected="false" data-target="pane-all">전체상품</button>
+                </div>
+
+                <div id="pane-catalog" class="seg-pane is-active" role="tabpanel">
+                    <ul class="catalog-grid" role="list">
+                        <li><button class="catalog-card" type="button" onclick="location.href='order-category.html'">
+                                <img src="images/ic_desktop.svg" alt="" aria-hidden="true"><span>전산용품</span>
+                            </button></li>
+                        <li><button class="catalog-card" type="button">
+                                <img src="images/ic_clean.svg" alt="" aria-hidden="true"><span>생활용품</span>
+                            </button></li>
+                        <li><button class="catalog-card" type="button">
+                                <img src="images/ic_print.svg" alt="" aria-hidden="true"><span>사무용품</span>
+                            </button></li>
+                        <li><button class="catalog-card" type="button">
+                                <img src="images/ic_pencil.svg" alt="" aria-hidden="true"><span>필기류</span>
+                            </button></li>
+                        <li><button class="catalog-card" type="button">
+                                <img src="images/ic_art.svg" alt="" aria-hidden="true"><span>아트메이트</span>
+                            </button></li>
+                        <li><button class="catalog-card" type="button">
+                                <img src="images/ic_files.svg" alt="" aria-hidden="true"><span>화일/바인더</span>
+                            </button></li>
+                    </ul>
+                </div>
+
+                <!-- 전체상품 탭 -->
+                <div id="pane-all" class="seg-pane" role="tabpanel" hidden>
+                    <p class="empty">전체상품 목록 준비중</p>
+                </div>
+
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/common.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 상단 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='new-products.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">신상품</h1>
+        </header>
+
+        <div class="container">
+            <!-- 상단 배너 자리 -->
+            <div class="new-banner" aria-label="신상품 안내 배너"><span>신상품 안내</span></div>
+
+            <section class="section new-detail" aria-labelledby="newDetailTitle">
+                <h2 id="newDetailTitle" class="sr-only">신상품 상세</h2>
+
+                <!-- 지점 선택 (커스텀 아코디언 버전) -->
+                <div class="select-wrap select-wrap--overlay" data-select>
+
+                    <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                        <div class="tit"><span class="selected">본점</span></div>
+                        <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <div class="select-unfold" hidden>
+                        <div class="inner" role="listbox" aria-label="지점 선택">
+                            <a href="#" role="option" data-value="본점" aria-selected="true">본점</a>
+                            <a href="#" role="option" data-value="지점 A">지점 A</a>
+                            <a href="#" role="option" data-value="지점 B">지점 B</a>
+                        </div>
+                    </div>
+
+                    <select class="select" aria-label="지점 선택" name="branch">
+                        <option selected>본점</option>
+                        <option>지점 A</option>
+                        <option>지점 B</option>
+                    </select>
+                </div>
+
+
+                <!-- 전체 개수 -->
+                <p class="new-total">전체(3)</p>
+                <hr class="divider" />
+
+                <!-- 상품 카드 -->
+                <div class="product-card">
+                    <div class="product-head">
+                        <label class="checkbox">
+                            <input type="checkbox" checked />
+                            <span></span>
+                            <strong class="name">슬라임</strong>
+                        </label>
+                        <span class="sku">5980687</span>
+                    </div>
+
+                    <div class="product-body">
+                        <div class="thumb" aria-hidden="true"></div>
+
+                        <dl class="facts">
+                            <div class="row">
+                                <dt>마진율</dt>
+                                <dd class="em">40%</dd>
+                            </div>
+                            <div class="row">
+                                <dt>공급가</dt>
+                                <dd>5,000원</dd>
+                            </div>
+                            <!-- 수량 스텝퍼 -->
+                            <div class="qty">
+                                <button class="qty-btn minus" type="button" aria-label="수량 감소">−</button>
+                                <output class="qty-val" aria-live="polite">10</output>
+                                <button class="qty-btn plus" type="button" aria-label="수량 증가">＋</button>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- 자세히 보기 -->
+                    <div class="actions">
+                        <button class="btn btn-primary detail" type="button">자세히 보기</button>
+                        <hr class="divider" />
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-head">
+                        <label class="checkbox">
+                            <input type="checkbox" checked />
+                            <span></span>
+                            <strong class="name">슬라임</strong>
+                        </label>
+                        <span class="sku">5980687</span>
+                    </div>
+
+                    <div class="product-body">
+                        <div class="thumb" aria-hidden="true"></div>
+
+                        <dl class="facts">
+                            <div class="row">
+                                <dt>마진율</dt>
+                                <dd class="em">40%</dd>
+                            </div>
+                            <div class="row">
+                                <dt>공급가</dt>
+                                <dd>5,000원</dd>
+                            </div>
+                            <!-- 수량 스텝퍼 -->
+                            <div class="qty">
+                                <button class="qty-btn minus" type="button" aria-label="수량 감소">−</button>
+                                <output class="qty-val" aria-live="polite">10</output>
+                                <button class="qty-btn plus" type="button" aria-label="수량 증가">＋</button>
+                            </div>
+                        </dl>
+                    </div>
+                    <!-- 자세히 보기 -->
+                    <div class="actions">
+                        <button class="btn btn-primary detail" type="button">자세히 보기</button>
+                        <hr class="divider" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

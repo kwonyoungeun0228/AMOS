@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/board.css" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='order.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">마이페이지</h1>
+        </header>
+
+        <div class="container">
+            <section class="section" aria-labelledby="orderTitle">
+                <h2 id="orderTitle" class="sr-only">마이페이지 - 세부 카테고리</h2>                
+                <!-- 카테고리 목록 -->
+                <ul class="subcat-list mypage-list" role="list">
+                    <li><a href="member-edit.html">회원 정보 수정</a></li>
+                    <li><a href="login.html">로그아웃</a></li>
+                    <li><a href="delete-account.html">회원탈퇴</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

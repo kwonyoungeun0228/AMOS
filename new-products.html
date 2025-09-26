@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 상단 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='home.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">신상품</h1>
+        </header>
+
+        <div class="container">
+            <div class="new-banner" aria-label="신상품 안내 배너"><span>신상품 안내</span></div>
+
+            <section class="section new-items" aria-labelledby="newListTitle">
+                <h2 id="newListTitle" class="sr-only">신상품 목록</h2>
+
+                <ul class="new-list" role="list">
+                    <li class="new-row">
+                        <a class="new-link" href="new-product-card.html">
+                            <time class="date" datetime="2025-09-01">2025-09-01</time>
+                            <span class="cate">문구 + 팬시</span>
+                            <span class="status link">대기</span>
+                        </a>
+                    </li>
+
+                    <li class="new-row">
+                        <a class="new-link" href="new-product-card.html">
+                            <time class="date" datetime="2025-09-01">2025-09-01</time>
+                            <span class="cate">문구 + 팬시</span>
+                            <span class="status link">대기</span>
+                        </a>
+                    </li>
+
+                    <li class="new-row">
+                        <a class="new-link" href="new-product-card.html">
+                            <time class="date" datetime="2025-09-01">2025-09-01</time>
+                            <span class="cate">문구 + 팬시</span>
+                            <span class="status link">대기</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

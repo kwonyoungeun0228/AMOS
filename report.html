@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <script src="js/tabs.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 공통 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='home.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">리포트</h1>
+        </header>
+
+        <div class="container">
+            <!-- 탭 -->
+            <nav class="tabs" role="tablist" aria-label="리포트 범위 선택">
+                <button class="tab is-active" role="tab" aria-selected="true" data-target="report-week">주별</button>
+                <button class="tab" role="tab" aria-selected="false" data-target="report-month">월별</button>
+                <button class="tab" role="tab" aria-selected="false" data-target="report-range">기간선택</button>
+            </nav>
+
+            <!-- 주별 -->
+            <section id="report-week" class="report is-active" aria-labelledby="reportTitleWeek">
+                <h2 id="reportTitle" class="sr-only">주별 리포트</h2>
+                <div class="section">
+                    <!-- 날짜 범위 + 미니차트 아이콘 -->
+                    <div class="report-range">
+                        <p class="range-text">2025.09.01~2025.09.07</p>
+                        <img class="mini-chart" src="images/mini-chart.png" alt="">
+                    </div>
+
+                    <!-- 지점 선택 (커스텀 아코디언 버전) -->
+                    <div class="select-wrap select-wrap--overlay" data-select>
+                        <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                            <div class="tit"><span class="selected">본점</span></div>
+                            <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <div class="select-unfold" hidden>
+                            <div class="inner" role="listbox" aria-label="지점 선택">
+                                <a href="#" role="option" data-value="본점" aria-selected="true">본점</a>
+                                <a href="#" role="option" data-value="지점 A">지점 A</a>
+                                <a href="#" role="option" data-value="지점 B">지점 B</a>
+                            </div>
+                        </div>
+
+                        <select class="select" aria-label="지점 선택" name="branch">
+                            <option selected>본점</option>
+                            <option>지점 A</option>
+                            <option>지점 B</option>
+                        </select>
+                    </div>
+
+
+                    <hr class="divider">
+
+                    <!-- 테이블 -->
+                    <div class="table-wrap">
+                        <table class="tbl-report" aria-label="주별 매출 리포트">
+                            <thead>
+                                <tr>
+                                    <th>날짜(요일)</th>
+                                    <th>건수</th>
+                                    <th>매출</th>
+                                    <th>비율</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>25-09-09</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                                <tr>
+                                    <td>25-09-08</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                                <tr>
+                                    <td>25-09-07</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                                <tr>
+                                    <td>25-09-06</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="sum">
+                                    <th scope="row">합계</th>
+                                    <td>400건</td>
+                                    <td>757,200원</td>
+                                    <td class="em">100%</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+            </section>
+
+
+            <!-- 월별 -->
+            <section id="report-month" class="report" aria-labelledby="reportTitleMonth" hidden>
+                <h2 id="reportTitleMonth" class="sr-only">월별 리포트</h2>
+                <div class="section">
+                    <!-- 날짜 범위 + 미니차트 아이콘 -->
+                    <div class="report-range">
+                        <p class="range-text">2025.09.01~2025.09.30</p>
+                        <img class="mini-chart" src="images/mini-chart.png" alt="">
+                    </div>
+
+                    <!-- 지점 선택 (커스텀 아코디언 버전) -->
+                    <div class="select-wrap select-wrap--overlay" data-select>
+                        <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                            <div class="tit"><span class="selected">본점</span></div>
+                            <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <div class="select-unfold" hidden>
+                            <div class="inner" role="listbox" aria-label="지점 선택">
+                                <a href="#" role="option" data-value="본점" aria-selected="true">본점</a>
+                                <a href="#" role="option" data-value="지점 A">지점 A</a>
+                                <a href="#" role="option" data-value="지점 B">지점 B</a>
+                            </div>
+                        </div>
+
+                        <select class="select" aria-label="지점 선택" name="branch">
+                            <option selected>본점</option>
+                            <option>지점 A</option>
+                            <option>지점 B</option>
+                        </select>
+                    </div>
+
+
+                    <hr class="divider">
+
+                    <!-- 테이블 -->
+                    <div class="table-wrap">
+                        <table class="tbl-report" aria-label="주별 매출 리포트">
+                            <thead>
+                                <tr>
+                                    <th>날짜(요일)</th>
+                                    <th>건수</th>
+                                    <th>매출</th>
+                                    <th>비율</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>25-09-09</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                                <tr>
+                                    <td>25-09-08</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                                <tr>
+                                    <td>25-09-07</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                                <tr>
+                                    <td>25-09-06</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="sum">
+                                    <th scope="row">합계</th>
+                                    <td>400건</td>
+                                    <td>757,200원</td>
+                                    <td class="em">100%</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+            </section>
+            <!-- 기간선택 -->
+            <section id="report-range" class="report" aria-labelledby="reportTitleRange" hidden>
+                <h2 id="reportTitleRange" class="sr-only">기간선택 리포트</h2>
+                <div class="section">
+                    <!-- 날짜 범위 + 미니차트 아이콘 -->
+                    <div class="report-range">
+                        <div class="range-controls">
+                            <div class="inp-group inp-group-date">
+                                <input type="text" class="inp-date inp-date-start" aria-label="시작일">
+                                <span class="unit">~</span>
+                                <input type="text" class="inp-date inp-date-end" aria-label="종료일">
+                            </div>
+                        </div>
+                        <img class="mini-chart" src="images/mini-chart.png" alt="">
+                    </div>
+
+                    <!-- 지점 선택 (커스텀 아코디언 버전) -->
+                    <div class="select-wrap select-wrap--overlay" data-select>
+                        <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                            <div class="tit"><span class="selected">본점</span></div>
+                            <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <div class="select-unfold" hidden>
+                            <div class="inner" role="listbox" aria-label="지점 선택">
+                                <a href="#" role="option" data-value="본점" aria-selected="true">본점</a>
+                                <a href="#" role="option" data-value="지점 A">지점 A</a>
+                                <a href="#" role="option" data-value="지점 B">지점 B</a>
+                            </div>
+                        </div>
+
+                        <select class="select" aria-label="지점 선택" name="branch">
+                            <option selected>본점</option>
+                            <option>지점 A</option>
+                            <option>지점 B</option>
+                        </select>
+                    </div>
+
+
+                    <hr class="divider">
+
+                    <!-- 테이블 -->
+                    <div class="table-wrap">
+                        <table class="tbl-report" aria-label="주별 매출 리포트">
+                            <thead>
+                                <tr>
+                                    <th>날짜(요일)</th>
+                                    <th>건수</th>
+                                    <th>매출</th>
+                                    <th>비율</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>25-09-09</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                                <tr>
+                                    <td>25-09-08</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                                <tr>
+                                    <td>25-09-07</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                                <tr>
+                                    <td>25-09-06</td>
+                                    <td>100건</td>
+                                    <td>189,300원</td>
+                                    <td class="em">10%</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="sum">
+                                    <th scope="row">합계</th>
+                                    <td>400건</td>
+                                    <td>757,200원</td>
+                                    <td class="em">100%</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+            </section>
+
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>

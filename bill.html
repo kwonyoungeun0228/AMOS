@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/common.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 공통 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='home.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">청구서</h1>
+        </header>
+
+        <div class="container">
+            <section class="section" aria-labelledby="billTitle">
+                <h2 id="billTitle" class="sr-only">청구서 조회</h2>
+
+                <!-- 지점 선택 -->
+                <div class="select-wrap select-wrap--overlay" data-select>
+
+                    <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                        <div class="tit"><span class="selected">본점</span></div>
+                        <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <div class="select-unfold" hidden>
+                        <div class="inner" role="listbox" aria-label="지점 선택">
+                            <a href="#" role="option" data-value="본점" aria-selected="true">본점</a>
+                            <a href="#" role="option" data-value="지점 A">지점 A</a>
+                            <a href="#" role="option" data-value="지점 B">지점 B</a>
+                        </div>
+                    </div>
+
+                    <select class="select" aria-label="지점 선택" name="branch">
+                        <option selected>본점</option>
+                        <option>지점 A</option>
+                        <option>지점 B</option>
+                    </select>
+                </div>
+
+                <div class="bill-filters">
+                    <div class="select-wrap select-wrap--overlay" data-select>
+                        <!-- 연도 -->
+                        <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                            <div class="tit"><span class="selected">2025년</span></div>
+                            <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="select-unfold" hidden>
+                            <div class="inner" role="listbox" aria-label="연도 선택">
+                                <a href="#" role="option" data-value="2025년" aria-selected="true">2025년</a>
+                                <a href="#" role="option" data-value="2024년">2024년</a>
+                                <a href="#" role="option" data-value="2023년">2023년</a>
+                            </div>
+                        </div>
+                        <select class="select" name="year" aria-label="연도 선택">
+                            <option selected>2025년</option>
+                            <option>2024년</option>
+                            <option>2023년</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrap select-wrap--overlay" data-select>
+                        <!-- 월 -->
+                        <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                            <div class="tit"><span class="selected">9월</span></div>
+                            <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="select-unfold" hidden>
+                            <div class="inner" role="listbox" aria-label="월 선택">
+                                <a href="#" role="option" data-value="9월" aria-selected="true">9월</a>
+                                <a href="#" role="option" data-value="8월">8월</a>
+                                <a href="#" role="option" data-value="7월">7월</a>
+                            </div>
+                        </div>
+                        <select class="select" name="month" aria-label="월 선택">
+                            <option selected>9월</option>
+                            <option>8월</option>
+                            <option>7월</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrap select-wrap--overlay" data-select>
+                        <!-- 회차 -->
+                        <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                            <div class="tit"><span class="selected">15일차</span></div>
+                            <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="select-unfold" hidden>
+                            <div class="inner" role="listbox" aria-label="회차 선택">
+                                <a href="#" role="option" data-value="15일차" aria-selected="true">15일차</a>
+                                <a href="#" role="option" data-value="16일차">16일차</a>
+                                <a href="#" role="option" data-value="17일차">17일차</a>
+                            </div>
+                        </div>
+                        <select class="select" name="cycle" aria-label="회차 선택">
+                            <option selected>15일차</option>
+                            <option>16일차</option>
+                            <option>17일차</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- 청구 카드 -->
+                <article class="bill-card" aria-label="선택된 청구 정보">
+                    <!-- 상단 영역 -->
+                    <div class="bill-card__top">
+                        <div class="bill-row">
+                            <span class="chip chip--light">본점</span>
+                        </div>
+
+                        <div class="bill-card__title">
+                            <span class="chip chip--white">2025년 09월 15일자 청구서</span>
+                            <strong class="bill-amount" aria-live="polite">0원</strong>
+                        </div>
+                    </div>
+
+                    <!-- 하단 영역 -->
+                    <div class="bill-card__bottom">
+                        <ol class="bill-notes">
+                            <li>결제일은 9월 20일 까지입니다.</li>
+                            <li>결제계좌 : 신한 140-013-581976</li>
+                        </ol>
+                        <span class="bill-owner">예금주 : (주)오피스넥스</span>
+                    </div>
+                </article>
+                <!-- 요약 -->
+                <div class="bill-summary">
+                    <div class="row">
+                        <span class="label">이월금액</span>
+                        <span class="value">0</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

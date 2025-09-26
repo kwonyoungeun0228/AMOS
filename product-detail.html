@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/common.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="history.back()">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">상품상세정보</h1>
+        </header>
+
+        <div class="container">
+            <section class="section pdt" aria-labelledby="pdtTitle">
+                <h2 id="pdtTitle" class="sr-only">상품 상세정보</h2>
+
+                <!-- 상단: 상품명 / 가격 / 코드 -->
+                <div class="pdt-head">
+                    <div class="left">
+                        <h3 class="name">수정테이프(씨티라인)</h3>
+                        <div class="price-row">
+                            <strong class="price">1,360</strong><span class="unit">원</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="sku">300090</span>
+                    </div>
+                </div>
+
+                <!-- 이미지 -->
+                <div class="pdt-hero" aria-label="상품 이미지">
+                    <div class="hero-fallback">
+                        <img src="images/amos_logo2.png" alt="" aria-hidden="true">
+                        <span>상품 이미지 없음</span>
+                    </div>
+                </div>
+
+                <!-- 스펙 테이블 -->
+                <div class="pdt-spec card">
+                    <dl class="spec-list">
+                        <div class="row">
+                            <dt>소비자가</dt>
+                            <dd class="strike">2,000원</dd>
+                        </div>
+                        <div class="row">
+                            <dt>회원가</dt>
+                            <dd class="em">1,700원</dd>
+                        </div>
+                        <div class="row">
+                            <dt>할인가</dt>
+                            <dd>1,360원</dd>
+                        </div>
+                        <div class="row">
+                            <dt>브랜드</dt>
+                            <dd>-</dd>
+                        </div>
+                        <div class="row">
+                            <dt>제조사</dt>
+                            <dd>-</dd>
+                        </div>
+                        <div class="row">
+                            <dt>원산지</dt>
+                            <dd>한국</dd>
+                        </div>
+                        <div class="row">
+                            <dt>배송비</dt>
+                            <dd>2,500원 <span class="muted">(30,000원 이상 구매시 무료)</span></dd>
+                        </div>
+                        <div class="row">
+                            <dt>규격</dt>
+                            <dd>5mm*6m</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <!-- 옵션/수량 -->
+                <div class="pdt-option card">
+                    <div class="frm-row">
+                        <label class="frm-label">옵션선택</label>
+                        <div class="select-wrap select-wrap--overlay" data-select>
+                            <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                                <div class="tit"><span class="selected">리필 1개</span></div>
+                                <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="select-unfold" hidden>
+                                <div class="inner" role="listbox" aria-label="옵션 선택">
+                                    <a href="#" role="option" data-value="리필 1개" aria-selected="true">리필 1개</a>
+                                    <a href="#" role="option" data-value="리필 2개">리필 2개</a>
+                                    <a href="#" role="option" data-value="본품">본품</a>
+                                </div>
+                            </div>
+                            <select class="select" aria-label="옵션 선택">
+                                <option selected>리필 1개</option>
+                                <option>리필 2개</option>
+                                <option>본품</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="frm-row">
+                        <label class="frm-label">수량</label>
+                        <div class="qty pdt-qty">
+                            <button class="qty-btn minus" type="button" aria-label="수량 감소">−</button>
+                            <output class="qty-val" aria-live="polite">1</output>
+                            <button class="qty-btn plus" type="button" aria-label="수량 증가">＋</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 액션 버튼 -->
+                <div class="pdt-actions">
+                    <button class="btn btn-gray" type="button">장바구니</button>
+                    <button class="btn btn-primary detail" type="button">바로구매</button>
+                    <button class="btn btn-gray" type="button">찜하기</button>
+                </div>
+
+                <!-- 하단 탭(기본정보/상세정보/상품평/Q&A) -->
+                <!-- 탭 네비게이션 -->
+                <div class="pdt-tabset">
+                    <nav class="seg-tabs pdt-tabs" role="tablist" aria-label="상품 상세 탭">
+                        <button class="seg-btn is-active" id="tab-basic" role="tab" aria-selected="true"
+                            aria-controls="panel-basic" data-tab="basic">기본정보</button>
+
+                        <button class="seg-btn" id="tab-detail" role="tab" aria-selected="false"
+                            aria-controls="panel-detail" data-tab="detail">상세정보</button>
+
+                        <button class="seg-btn" id="tab-review" role="tab" aria-selected="false"
+                            aria-controls="panel-review" data-tab="review">상품평(0)</button>
+
+                        <button class="seg-btn" id="tab-qa" role="tab" aria-selected="false" aria-controls="panel-qa"
+                            data-tab="qa">Q&amp;A(0)</button>
+                    </nav>
+
+                    <!-- 탭 패널들 -->
+                    <div class="pdt-tabpanes">
+                        <!-- 기본정보 -->
+                        <section class="seg-pane is-active" id="panel-basic" role="tabpanel"
+                            aria-labelledby="tab-basic">
+                            <p class="pdt-tip">※ 구매하시기 전 꼭 확인하셔야 할 상품/거래 정보입니다.</p>
+
+                            <h3 class="co-title">상품상세정보 고시</h3>
+                            <div class="card pdt-legal">상세 고시 내용이 표시됩니다.</div>
+                        </section>
+
+                        <!-- 상세정보 -->
+                        <section class="seg-pane" id="panel-detail" role="tabpanel" aria-labelledby="tab-detail" hidden>
+                            <div class="card">상세 설명/이미지 영역</div>
+                        </section>
+
+                        <!-- 상품평 -->
+                        <section class="seg-pane" id="panel-review" role="tabpanel" aria-labelledby="tab-review" hidden>
+                            <div class="card">등록된 상품평이 없습니다.</div>
+                        </section>
+
+                        <!-- Q&A -->
+                        <section class="seg-pane" id="panel-qa" role="tabpanel" aria-labelledby="tab-qa" hidden>
+                            <div class="card">등록된 문의가 없습니다.</div>
+                        </section>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

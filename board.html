@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/board.css" />
+    <script src="js/common.js"></script>
+    <script src="js/board-tabs.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='home.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">게시판</h1>
+        </header>
+
+        <div class="container">
+            <section class="section" aria-labelledby="boardTitle">
+                <h2 id="boardTitle" class="sr-only">게시판 목록</h2>
+
+                <div class="seg-tabs" role="tablist" aria-label="게시판 탭">
+                    <button class="seg-btn is-active" role="tab" aria-selected="true"
+                        data-target="pane-promo">프로모션</button>
+                    <button class="seg-btn" role="tab" aria-selected="false" data-target="pane-price">가격공지</button>
+                </div>
+
+                <!-- 프로모션 -->
+                <div id="pane-promo" class="seg-pane is-active" role="tabpanel">
+                    <ul class="board-list" role="list">
+                        <li class="board-item">
+                            <a href="board-detail.html" class="board-link">
+                                <article class="board-card">
+                                    <div class="thumb" aria-hidden="true">
+                                        <div class="thumb-fallback">
+                                            <img src="images/amos_logo2.png" alt="아모스 로고">
+                                            <span class="sub">프로모션 이미지 준비중</span>
+                                        </div>
+                                    </div>
+                                    <div class="board-title">
+                                        <strong>[프로모션] [게릴라] [사무] [25년 9월 1일]<br>
+                                            M시리즈 M멀티테이프, M듀테이프</strong>
+                                    </div>
+                                </article>
+                            </a>
+                        </li>
+
+                        <li class="board-item">
+                            <a href="board-detail.html" class="board-link">
+                                <article class="board-card">
+                                    <div class="thumb" aria-hidden="true">
+                                        <div class="thumb-fallback">
+                                            <img src="images/amos_logo2.png" alt="아모스 로고">
+                                            <span class="sub">프로모션 이미지 준비중</span>
+                                        </div>
+                                    </div>
+                                    <div class="board-title">
+                                        <strong>[프로모션] [게릴라] [사무] [25년 9월 1일]<br>
+                                            M시리즈 M멀티테이프, M듀테이프</strong>
+                                    </div>
+                                </article>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 가격 공지 -->
+                <div id="pane-price" class="seg-pane" role="tabpanel" hidden>
+                    <ul class="board-list" role="list">
+                        <li class="board-item">
+                            <article class="board-card">
+                                <div class="thumb" aria-hidden="true">
+                                    <div class="thumb-fallback">
+                                        <img src="images/amos_logo2.png" alt="아모스 로고">
+                                        <span class="sub">이미지 준비중</span>
+                                    </div>
+                                </div>
+                                <div class="board-title">
+                                    <strong>[가격공지] [25년 9월 1일 적용]</strong>
+                                    <p class="desc">일부 품목 공급가 조정 안내</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

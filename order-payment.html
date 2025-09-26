@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <script src="js/common.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='cart.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">주문결제</h1>
+        </header>
+
+        <div class="container">
+            <section class="section checkout" aria-labelledby="checkoutTitle">
+                <h2 id="checkoutTitle" class="sr-only">주문결제</h2>
+
+                <!-- 1. 주문상품정보 -->
+                <h3 class="co-title">주문상품정보</h3>
+                <div class="co-card co-items">
+                    <article class="co-item">
+                        <div class="thumb" aria-hidden="true"></div>
+                        <div class="meta">
+                            <p class="name">다회용 청결젤시(중/3호/201mm/10개입/중해)</p>
+                            <div class="row price">
+                                <strong class="num">2,000</strong><span class="unit">원</span>
+                                <span class="muted">개당 2,000원</span>
+                                <span class="muted">1개</span>
+                            </div>
+                            <p class="sku">
+                                <a href="#" class="link">813840</a>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="co-item">
+                        <div class="thumb" aria-hidden="true"></div>
+                        <div class="meta">
+                            <p class="name">이어폰(RP-HV094/파나소닉)</p>
+                            <div class="row price">
+                                <strong class="num">5,200</strong><span class="unit">원</span>
+                                <span class="muted">개당 5,200원</span>
+                                <span class="muted">1개</span>
+                            </div>
+                            <p class="sku">
+                                <a href="#" class="link">232540</a>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <hr class="divider">
+                <!-- 2. 주문하시는 분 -->
+                <h3 class="co-title">주문하시는 분</h3>
+                <div class="co-card">
+                    <div class="frm-row">
+                        <label class="frm-label" for="o_name">주문자</label>
+                        <input id="o_name" class="input" type="text" value="김아름">
+                    </div>
+
+                    <div class="frm-row">
+                        <label class="frm-label" for="o_email">이메일</label>
+                        <input id="o_email" class="input" type="email" value="arum@arumnet.com">
+                    </div>
+
+                    <div class="frm-row">
+                        <span class="frm-label">휴대폰</span>
+                        <div class="grid-3">
+                            <div class="select-wrap select-wrap--overlay" data-select>
+                                <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="tit"><span class="selected">010</span></div>
+                                    <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                        aria-hidden="true">
+                                        <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="select-unfold" hidden>
+                                    <div class="inner" role="listbox" aria-label="휴대폰 앞자리">
+                                        <a href="#" role="option" data-value="011">011</a>
+                                        <a href="#" role="option" data-value="016">016</a>
+                                        <a href="#" role="option" data-value="017">017</a>
+                                    </div>
+                                </div>
+                                <select class="select" aria-label="휴대폰 앞자리" name="o_hp1">
+                                    <option selected>010</option>
+                                    <option>011</option>
+                                    <option>016</option>
+                                    <option>017</option>
+                                </select>
+                            </div>
+                            <input class="input" type="text" value="1234" inputmode="numeric">
+                            <input class="input" type="text" value="5678" inputmode="numeric">
+                        </div>
+                    </div>
+
+                    <div class="frm-row">
+                        <span class="frm-label">전화번호</span>
+                        <div class="grid-3">
+                            <input class="input" type="text" value="02">
+                            <input class="input" type="text" value="1234">
+                            <input class="input" type="text" value="5678">
+                        </div>
+                    </div>
+
+                    <div class="frm-row">
+                        <span class="frm-label">주소</span>
+                        <div class="grid-addr">
+                            <input class="input" type="text" value="08502" aria-label="우편번호">
+                            <button class="btn btn-outline btn-zip" type="button">우편번호</button>
+                        </div>
+                        <input class="input mt8" type="text" value="서울 금천구 가산디지털1로 196" aria-label="기본주소">
+                        <input class="input mt8" type="text" value="에이스테크노타워10차" aria-label="상세주소">
+                    </div>
+                </div>
+                <hr class="divider">
+                <!-- 3. 상품 받으시는 분 -->
+                <h3 class="co-title">상품 받으시는 분
+                    <button class="btn-chip" type="button">주문자 정보와 동일</button>
+                </h3>
+                <div class="co-card">
+                    <div class="frm-row">
+                        <label class="frm-label" for="r_name">수령자</label>
+                        <input id="r_name" class="input" type="text" placeholder="">
+                    </div>
+
+                    <div class="frm-row">
+                        <label class="frm-label" for="r_email">이메일</label>
+                        <input id="r_email" class="input" type="email" placeholder="">
+                    </div>
+
+                    <div class="frm-row">
+                        <span class="frm-label">휴대폰</span>
+                        <div class="grid-3">
+                            <div class="select-wrap select-wrap--overlay" data-select>
+                                <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="tit"><span class="selected">010</span></div>
+                                    <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                        aria-hidden="true">
+                                        <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="select-unfold" hidden>
+                                    <div class="inner" role="listbox" aria-label="휴대폰 앞자리">
+                                        <a href="#" role="option" data-value="010" aria-selected="true">010</a>
+                                        <a href="#" role="option" data-value="011">011</a>
+                                        <a href="#" role="option" data-value="016">016</a>
+                                        <a href="#" role="option" data-value="017">017</a>
+                                    </div>
+                                </div>
+                                <select class="select" aria-label="휴대폰 앞자리" name="r_hp1">
+                                    <option selected>010</option>
+                                    <option>011</option>
+                                    <option>016</option>
+                                    <option>017</option>
+                                </select>
+                            </div>
+                            <input class="input" type="text" inputmode="numeric">
+                            <input class="input" type="text" inputmode="numeric">
+                        </div>
+                    </div>
+
+                    <div class="frm-row">
+                        <span class="frm-label">전화번호</span>
+                        <div class="grid-3">
+                            <input class="input" type="text">
+                            <input class="input" type="text">
+                            <input class="input" type="text">
+                        </div>
+                    </div>
+
+                    <div class="frm-row">
+                        <span class="frm-label">주소</span>
+                        <div class="grid-addr">
+                            <input class="input" type="text" aria-label="우편번호">
+                            <button class="btn btn-outline btn-zip" type="button">우편번호</button>
+                        </div>
+                        <input class="input mt8" type="text" aria-label="기본주소">
+                        <input class="input mt8" type="text" aria-label="상세주소">
+                    </div>
+
+                    <div class="frm-row">
+                        <label class="frm-label" for="memo">메모</label>
+                        <textarea id="memo" class="textarea" rows="3" placeholder=""></textarea>
+                    </div>
+                </div>
+                <hr class="divider">
+                <!-- 4. 결제정보 -->
+                <h3 class="co-title">결제정보</h3>
+                <div class="co-card">
+                    <div class="frm-row co-inline">
+                        <span class="frm-label">쿠폰할인</span>
+                        <div class="right">
+                            <div>
+                                <!-- 선택후 텍스트  -->
+                                <p> 신규가입 10% 감사 할인쿠폰</p>
+                                <!-- 선택전 버튼 -->
+                                <button class="btn btn-outline btn-sm" type="button" id="btnOpenCoupon">쿠폰선택</button>
+                            </div>
+                            <button class="btn btn-gray btn-sm" type="button">취소</button>
+                        </div>
+                    </div>
+
+                    <div class="frm-row co-inline">
+                        <span class="frm-label">포인트사용</span>
+                        <div class="left">
+                            <input class="input input-sm" type="text" placeholder="사용 포인트">
+                            <button class="btn btn-outline btn-sm" type="button">사용</button>
+                        </div>
+                    </div>
+
+                    <p class="hint">사용가능 포인트 <b>99,939,291,980P</b></p>
+                </div>
+                <hr class="divider">
+                <!-- 5. 결제 수단 -->
+                <h3 class="co-title">결제 수단</h3>
+                <div class="co-card">
+                    <ul class="co-radio-list" role="list" id="payMethodList">
+                        <li><label class="rdo"><input type="radio" name="pay" value="card" checked><i></i>신용카드</label>
+                        </li>
+                        <li><label class="rdo"><input type="radio" name="pay" value="mobile"><i></i>휴대폰결제</label></li>
+                        <li><label class="rdo"><input type="radio" name="pay" value="card-escrow"><i></i>카드결제<br><span
+                                    class="sub">에스크로</span></label></li>
+                        <li><label class="rdo"><input type="radio" name="pay"
+                                    value="acct-realtime"><i></i>실시간계좌이체<br><span class="sub">에스크로</span></label></li>
+                        <li><label class="rdo"><input type="radio" name="pay" value="bank"><i></i>무통장입금</label></li>
+                        <li><label class="rdo"><input type="radio" name="pay" value="vacct"><i></i>가상계좌이체</label></li>
+                        <li><label class="rdo"><input type="radio" name="pay"
+                                    value="vacct-escrow"><i></i>가상계좌이체<br><span class="sub">에스크로</span></label></li>
+                        <li><label class="rdo"><input type="radio" name="pay" value="postpay"><i></i>후불결제</label></li>
+                    </ul>
+
+                    <!-- ▼ 무통장입금 추가 정보 : 처음엔 숨김 -->
+                    <div id="bankTransferBox" class="pay-extra" hidden>
+                        <div class="frm-row">
+                            <label class="frm-label" for="bt_account">입금계좌정보</label>
+                            <!-- stock.html의 select-wrap 그대로 재사용 -->
+                            <div class="select-wrap select-wrap--overlay" data-select>
+                                <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="tit"><span class="selected">신한은행 : 123-456-7890</span></div>
+                                    <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                        aria-hidden="true">
+                                        <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div class="select-unfold" hidden>
+                                    <div class="inner" role="listbox" aria-label="입금계좌">
+                                        <a href="#" role="option" data-value="신한은행 : 123-456-7890"
+                                            aria-selected="true">신한은행 : 123-456-7890</a>
+                                        <a href="#" role="option" data-value="국민은행 : 333-222-111111">국민은행 :
+                                            333-222-111111</a>
+                                        <a href="#" role="option" data-value="우리은행 : 555-444-333333">우리은행 :
+                                            555-444-333333</a>
+                                    </div>
+                                </div>
+                                <select class="select" id="bt_account" aria-label="입금계좌정보" name="bt_account">
+                                    <option selected>신한은행 : 123-456-7890</option>
+                                    <option>국민은행 : 333-222-111111</option>
+                                    <option>우리은행 : 555-444-333333</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="frm-row">
+                            <label class="frm-label" for="bt_depositor">입금자명</label>
+                            <input id="bt_depositor" class="input" type="text" placeholder="예: 김아름">
+                        </div>
+
+                        <div class="frm-row">
+                            <label class="frm-label" for="bt_date">입금예정일자</label>
+                            <div class="inp-group inp-group-date">
+                                <input id="bt_date" type="text" class="inp-date" aria-label="입금예정일자">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ▲ 무통장입금 추가 정보 -->
+                </div>
+
+                <hr class="divider">
+                <!-- 6. 결제 조건 선택 -->
+                <h3 class="co-title">결제 조건 선택</h3>
+                <div class="co-card">
+                    <ul class="co-radio-list" role="list" id="condList">
+                        <li><label class="rdo"><input type="radio" name="cond" value="none" checked><i></i>없음</label>
+                        </li>
+                        <li><label class="rdo"><input type="radio" name="cond" value="tax"><i></i>세금계산서</label></li>
+                        <li><label class="rdo"><input type="radio" name="cond" value="tax-pay"><i></i>세금계산서(결제)</label>
+                        </li>
+                        <li><label class="rdo"><input type="radio" name="cond" value="cash"><i></i>현금영수증</label></li>
+                    </ul>
+
+                    <!-- ▼ 세금계산서 폼 -->
+                    <div id="condTaxBox" class="cond-extra" hidden>
+                        <div class="frm-row">
+                            <label class="frm-label" for="tax_company">업체명(한글)</label>
+                            <input id="tax_company" type="text" class="input" placeholder="">
+                        </div>
+                        <div class="frm-row">
+                            <label class="frm-label" for="tax_bizno">사업자등록번호</label>
+                            <input id="tax_bizno" type="text" class="input" inputmode="numeric"
+                                placeholder="예: 123-45-67890">
+                        </div>
+                        <div class="frm-row">
+                            <label class="frm-label" for="tax_ceo">대표자명</label>
+                            <input id="tax_ceo" type="text" class="input" placeholder="">
+                        </div>
+                        <div class="frm-row grid-addr">
+                            <div>
+                                <label class="frm-label" for="tax_type">업태</label>
+                                <input id="tax_type" type="text" class="input" placeholder="">
+                            </div>
+                            <div>
+                                <label class="frm-label" for="tax_class">업종</label>
+                                <input id="tax_class" type="text" class="input" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ▲ 세금계산서 폼 -->
+
+                    <!-- ▼ 현금영수증 폼 -->
+                    <div id="condCashBox" class="cond-extra" hidden>
+                        <div class="frm-row">
+                            <span class="frm-label">신청 구분</span>
+                            <ul class="co-radio-list" role="list">
+                                <li><label class="rdo"><input type="radio" name="cashType" value="hp"
+                                            checked><i></i>휴대폰번호</label></li>
+                                <li><label class="rdo"><input type="radio" name="cashType" value="card"><i></i>현금영수증
+                                        카드번호</label></li>
+                                <li><label class="rdo"><input type="radio" name="cashType"
+                                            value="biz"><i></i>사업자번호</label></li>
+                            </ul>
+                        </div>
+
+                        <!-- 휴대폰번호 -->
+                        <div class="frm-row cash-info cash-hp">
+                            <span class="frm-label">신청 정보</span>
+                            <div class="grid-3">
+                                <div class="select-wrap select-wrap--overlay" data-select>
+                                    <div class="select-fold" role="button" aria-expanded="false" tabindex="0">
+                                        <div class="tit"><span class="selected">010</span></div>
+                                        <svg class="select-arrow" width="18" height="18" viewBox="0 0 24 24"
+                                            aria-hidden="true">
+                                            <path d="M6 9l6 6 6-6" fill="none" stroke="#555" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="select-unfold" hidden>
+                                        <div class="inner" role="listbox" aria-label="휴대폰 앞자리">
+                                            <a href="#" role="option" data-value="010" aria-selected="true">010</a>
+                                            <a href="#" role="option" data-value="011">011</a>
+                                            <a href="#" role="option" data-value="016">016</a>
+                                            <a href="#" role="option" data-value="017">017</a>
+                                        </div>
+                                    </div>
+                                    <select class="select" aria-label="휴대폰 앞자리" name="cash_hp1">
+                                        <option selected>010</option>
+                                        <option>011</option>
+                                        <option>016</option>
+                                        <option>017</option>
+                                    </select>
+                                </div>
+                                <input class="input" type="text" inputmode="numeric" name="cash_hp2" placeholder="">
+                                <input class="input" type="text" inputmode="numeric" name="cash_hp3" placeholder="">
+                            </div>
+                        </div>
+
+                        <!-- 현금영수증 카드번호 -->
+                        <div class="frm-row cash-info cash-card" hidden>
+                            <label class="frm-label" for="cash_card">신청 정보</label>
+                            <input id="cash_card" class="input" type="text" inputmode="numeric"
+                                placeholder="카드번호(‘-’ 없이)">
+                        </div>
+
+                        <!-- 사업자번호 -->
+                        <div class="frm-row cash-info cash-biz" hidden>
+                            <label class="frm-label" for="cash_biz">신청 정보</label>
+                            <input id="cash_biz" class="input" type="text" inputmode="numeric"
+                                placeholder="예: 123-45-67890">
+                        </div>
+                    </div>
+                    <!-- ▲ 현금영수증 폼 -->
+                </div>
+
+                <hr class="divider">
+                <!-- 7. 결제 금액 -->
+                <h3 class="co-title">결제 금액</h3>
+                <div class="co-card co-total">
+                    <div class="row">
+                        <span class="label">총 주문금액</span>
+                        <strong class="value">7,200원</strong>
+                    </div>
+                    <div class="grid-3c">
+                        <div class="box">
+                            <p class="cap">선택상품</p>
+                            <p class="val">7,200원</p>
+                        </div>
+                        <div class="box">
+                            <p class="cap">할인+차감</p>
+                            <p class="val">0원</p>
+                        </div>
+                        <div class="box">
+                            <p class="cap">배송비</p>
+                            <p class="val">0원</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <hr class="divider">
+
+                <div class="co-card co-total">
+
+                    <div class="row em">
+                        <span class="label">최종 결제금액</span>
+                        <strong class="value final">7,200원</strong>
+                    </div>
+                </div>
+
+                <!-- 하단 버튼 -->
+                <div class="co-actions">
+                    <button class="btn btn-primary btn-lg" type="button">결제하기</button>
+                    <button class="btn" type="button" onclick="location.href='cart.html'">장바구니가기</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <!-- 쿠폰선택 모달 -->
+    <div id="couponModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="couponModalTitle" hidden>
+        <div class="modal-dim" data-close="coupon"></div>
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-head">
+                <h4 id="couponModalTitle" class="modal-title">사용가능기간 쿠폰 현황</h4>
+                <button class="modal-close" type="button" aria-label="닫기" data-close="coupon">
+                    <img src="images/btn-trash-wh.png" alt="삭제">
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="table-wrap">
+                    <table class="tbl-report" aria-label="사용가능 쿠폰 목록" id="couponTable">
+                        <thead>
+                            <tr>
+                                <th>쿠폰명</th>
+                                <th>혜택</th>
+                                <th>사용조건</th>
+                                <th>유효기간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-coupon-id="C001" data-coupon-name="배송비할인테스트-sw">
+                                <td>배송비할인테스트-sw</td>
+                                <td>2,000 할인</td>
+                                <td>0원 이상 주문시</td>
+                                <td>2026-01-14</td>
+                            </tr>
+                            <tr data-coupon-id="C002" data-coupon-name="신규가입 10% 쿠폰">
+                                <td>신규가입 10% 쿠폰</td>
+                                <td>10% 할인(최대 5,000)</td>
+                                <td>1만원 이상</td>
+                                <td>2025-12-31</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <div class="modal-foot">
+                <button class="btn btn-primary" type="button" id="couponConfirmBtn" disabled>확인</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

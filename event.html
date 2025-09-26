@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/common.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='order.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">주문</h1>
+        </header>
+
+        <div class="container">
+            <div class="new-banner" aria-label="이벤트"><span>이벤트</span></div>
+            <section class="section order-search-page" aria-labelledby="ordSearchTitle">
+                <!-- 결과 리스트 -->
+                <ul class="os-list event-list" role="list">      
+                    <li class="os-item">
+                        <div class="os-thumb" aria-hidden="true"></div>
+                        <div class="os-info">
+                            <p class="os-name">딱풀테이프리필</p>
+                            <p class="os-spec">8.4mm*8M</p>
+                            <p class="os-stock">0</p>
+                            <p class="os-price"><b>0원</b></p>
+                        </div>                        
+                    </li>
+                    <div class="pdt-actions" bis_skin_checked="1">
+                            <button class="btn btn-gray" type="button">장바구니</button>
+                            <button class="btn btn-primary detail" type="button">바로구매</button>
+                            <button class="btn btn-gray" type="button">찜하기</button>
+                        </div>
+                </ul>
+
+                <ul class="os-list event-list" role="list">      
+                    <li class="os-item">
+                        <div class="os-thumb" aria-hidden="true"></div>
+                        <div class="os-info">
+                            <p class="os-name">딱풀테이프리필</p>
+                            <p class="os-spec">8.4mm*8M</p>
+                            <p class="os-stock">0</p>
+                            <p class="os-price"><b>0원</b></p>
+                        </div>                        
+                    </li>
+                    <div class="pdt-actions" bis_skin_checked="1">
+                            <button class="btn btn-gray" type="button">장바구니</button>
+                            <button class="btn btn-primary detail" type="button">바로구매</button>
+                            <button class="btn btn-gray" type="button">찜하기</button>
+                        </div>
+                </ul>
+
+                <ul class="os-list event-list" role="list">      
+                    <li class="os-item">
+                        <div class="os-thumb" aria-hidden="true"></div>
+                        <div class="os-info">
+                            <p class="os-name">딱풀테이프리필</p>
+                            <p class="os-spec">8.4mm*8M</p>
+                            <p class="os-stock">0</p>
+                            <p class="os-price"><b>0원</b></p>
+                        </div>                        
+                    </li>
+                    <div class="pdt-actions" bis_skin_checked="1">
+                            <button class="btn btn-gray" type="button">장바구니</button>
+                            <button class="btn btn-primary detail" type="button">바로구매</button>
+                            <button class="btn btn-gray" type="button">찜하기</button>
+                        </div>
+                </ul>
+                <!-- 필요 개수만큼 반복 -->
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

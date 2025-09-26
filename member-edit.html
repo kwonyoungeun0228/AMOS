@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/board.css" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='mypage.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">회원 정보 수정</h1>
+        </header>
+
+        <div class="container">
+            <section class="section" aria-labelledby="orderTitle">
+                <h2 id="orderTitle" class="sr-only">회원 정보</h2>
+                <!-- 카테고리 목록 -->
+                <ul class="subcat-list profile-list" role="list">
+                    <li class="item">
+                        <div class="field">
+                            <span class="label">로그인ID</span>
+                            <span class="value">ARUM8484</span>
+                        </div>
+                    </li>
+
+                    <!-- 비밀번호 변경 -->
+                    <li class="item">
+                        <div class="field">
+                            <span class="label">비밀번호 변경</span>
+                        </div>
+                        <button class="btn-more" type="button"
+                            onclick="location.href='change-password.html'">상세</button>
+
+                    </li>
+
+                    <!-- 전화번호 -->
+                    <li class="item">
+                        <div class="field">
+                            <span class="label">전화번호</span>
+                            <span class="value">02-0000-9999</span>
+                        </div>
+                        <button class="btn-more" type="button">상세</button>
+                    </li>
+
+                    <!-- 휴대전화 -->
+                    <li class="item">
+                        <div class="field">
+                            <span class="label">휴대전화</span>
+                            <span class="value">010-0000-9999</span>
+                        </div>
+                        <button class="btn-more" type="button">상세</button>
+                    </li>
+
+                    <!-- 주소 -->
+                    <li class="item">
+                        <div class="field">
+                            <span class="label">주소</span>
+                            <span class="value">
+                                서울시 영등포구 여의도동 ABC로00번길 201호
+                            </span>
+                        </div>
+                        <button class="btn-more" type="button">상세</button>
+                    </li>
+
+                    <!-- 이메일 -->
+                    <li class="item">
+                        <div class="field">
+                            <span class="label">이메일</span>
+                            <span class="value">AMOS@AMOS.COM</span>
+                        </div>
+                        <button class="btn-more" type="button">상세</button>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

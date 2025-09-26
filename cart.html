@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <script src="js/common.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='home.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">장바구니</h1>
+        </header>
+
+        <div class="container">
+            <section class="section cart" aria-labelledby="cartTitle">
+                <h2 id="cartTitle" class="sr-only">장바구니 목록</h2>
+
+                <!-- 상단 선택/삭제 바 -->
+                <div class="cart-top">
+                    <label class="checkbox cart-checkall">
+                        <input type="checkbox">
+                        <span></span>
+                        <em>장바구니 상품 (2/3)</em>
+                    </label>
+
+                </div>
+                <hr class="divider" />
+
+                <!-- 장바구니 리스트 -->
+                <ul class="cart-list" role="list">
+                    <li class="cart-item">
+                        <div class="row head">
+                            <label class="checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                            </label>
+                            <div class="title">
+                                <strong>광동 비타500(캔/240ml/30개입)</strong>
+                            </div>
+                            <button class="btn-trash" type="button" aria-label="삭제">
+                                <img src="images/btn-trash.png" alt="삭제">
+                            </button>
+                        </div>
+
+                        <div class="row meta">
+                            <div>
+                                <dl class="kv">
+                                    <dt>개당</dt>
+                                    <dd>12,000원</dd>
+                                </dl>
+                                <div class="kv">
+                                    <div class="frm-row" bis_skin_checked="1">
+                                        <label class="frm-label">수량</label>
+                                        <div class="qty pdt-qty" bis_skin_checked="1">
+                                            <button class="qty-btn minus" type="button" aria-label="수량 감소">−</button>
+                                            <output class="qty-val" aria-live="polite">3</output>
+                                            <button class="qty-btn plus" type="button" aria-label="수량 증가">＋</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="kv row sum">
+                            <div><span class="label">합계</span>
+                                <strong class="value">12,000원</strong>
+                            </div>
+                            <button class="btn btn-primary btn-buy" type="button">수정</button>
+                        </div>
+                    </li>
+
+                    <li class="cart-item">
+                        <div class="row head">
+                            <label class="checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                            </label>
+                            <div class="title">
+                                <strong>광동 비타500(캔/240ml/30개입)</strong>
+                            </div>
+                            <button class="btn-trash" type="button" aria-label="삭제">
+                                <img src="images/btn-trash.png" alt="삭제">
+                            </button>
+                        </div>
+
+                        <div class="row meta">
+                            <div>
+                                <dl class="kv">
+                                    <dt>개당</dt>
+                                    <dd>12,000원</dd>
+                                </dl>
+                                <div class="kv">
+                                    <div class="frm-row" bis_skin_checked="1">
+                                        <label class="frm-label">수량</label>
+                                        <div class="qty pdt-qty" bis_skin_checked="1">
+                                            <button class="qty-btn minus" type="button" aria-label="수량 감소">−</button>
+                                            <output class="qty-val" aria-live="polite">3</output>
+                                            <button class="qty-btn plus" type="button" aria-label="수량 증가">＋</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="kv row sum">
+                            <div><span class="label">합계</span>
+                                <strong class="value">12,000원</strong>
+                            </div>
+                            <button class="btn btn-primary btn-buy" type="button">수정</button>
+                        </div>
+                    </li>
+
+                    <li class="cart-item">
+                        <div class="row head">
+                            <label class="checkbox">
+                                <input type="checkbox" />
+                                <span></span>
+                            </label>
+                            <div class="title">
+                                <strong>광동 비타500(캔/240ml/30개입)</strong>
+                            </div>
+                            <button class="btn-trash" type="button" aria-label="삭제">
+                                <img src="images/btn-trash.png" alt="삭제">
+                            </button>
+                        </div>
+
+                        <div class="row meta">
+                            <div>
+                                <dl class="kv">
+                                    <dt>개당</dt>
+                                    <dd>12,000원</dd>
+                                </dl>
+                                <div class="kv">
+                                    <div class="frm-row" bis_skin_checked="1">
+                                        <label class="frm-label">수량</label>
+                                        <div class="qty pdt-qty" bis_skin_checked="1">
+                                            <button class="qty-btn minus" type="button" aria-label="수량 감소">−</button>
+                                            <output class="qty-val" aria-live="polite">3</output>
+                                            <button class="qty-btn plus" type="button" aria-label="수량 증가">＋</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="kv row sum">
+                            <div><span class="label">합계</span>
+                                <strong class="value">12,000원</strong>
+                            </div>
+                            <button class="btn btn-primary btn-buy" type="button">수정</button>
+                        </div>
+                    </li>
+                </ul>
+                <hr class="divider2">
+                <div class="co-card co-total" bis_skin_checked="1">
+
+                    <div class="row em" bis_skin_checked="1">
+                        <span class="label">최종 결제금액</span>
+                        <strong class="value final">7,200원</strong>
+                    </div>
+                </div>
+
+
+                <div class="cart-pdt-actions" bis_skin_checked="1">
+                    <button class="btn cart-selectremove" type="button">선택삭제</button>
+                    <button class="btn btn-detail" type="button">전체삭제</button>
+                    <button class="btn btn-select" type="button" onclick="location.href='order-payment.html'">선택구매</button>
+                    <button class="btn btn-total" type="button" onclick="location.href='order-payment.html'">전체구매</button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+.seg-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 0 0 20px;
+}
+
+.seg-btn {
+    flex: 1;
+    height: 43px;
+    border-radius: 4px;
+    border: 0;
+    background: #E2E1E1;
+    color: #999;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'SCDream-Medium';
+}
+
+.seg-btn.is-active {
+    background: #21409A;
+    border-color: #21409A;
+    color: #fff;
+}
+
+.seg-pane {
+    display: none;
+}
+
+.seg-pane.is-active {
+    display: block;
+}
+
+.seg-pane[hidden] {
+    display: none !important;
+}
+
+.board-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.board-list .board-item:first-child .board-card {
+    padding-top: 0;
+}
+
+.board-card {
+
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+
+.board-card .thumb {
+    height: 200px;
+    border-radius: 12px;
+    background: #E4E4E4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumb-fallback {
+    text-align: center;
+    color: #9AA3B2;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.thumb-fallback .sub {
+    font-size: 16px;
+    color: #999;
+}
+
+.board-title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.board-title strong {
+    font-size: 16px;
+    color: #333;
+    font-style: normal;
+    letter-spacing: -1px;
+}
+
+.board-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.board-link:hover .board-card {
+    filter: brightness(0.97);
+}
+
+/* === 게시판 상세 === */
+.bd-head {
+    margin-bottom: 28px;
+}
+
+.bd-title {
+    font-size: 16px;
+    color: #333;
+}
+
+.bd-file {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 16px;
+    font-family: 'SCDream-Regular';
+}
+
+.bd-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #666;
+    font-family: 'SCDream-Regular';
+}
+
+.bd-nav a {
+    color: #666;
+}
+
+.bd-nav li {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.bd-nav li:first-child {
+    border-top: 0;
+}
+
+.bd-nav span {
+    flex-shrink: 0;
+}
+
+.bd-actions {
+    margin-top: 24px;
+    text-align: center;
+}
+
+/* ===== Notice  ===== */
+.notice-wrap .title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 0 14px;
+    font-size: 16px;
+    color: #222;
+}
+
+.notice-wrap .meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 14px;
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+.notice-wrap .author {
+    color: #21409A;
+    text-decoration: none;
+}
+
+.notice-wrap .date {
+    color: #999;
+}
+
+.notice-wrap .divider {
+    margin: 0 0 14px;
+}
+
+.notice-wrap .list {
+    font-family: 'SCDream-Regular';
+    list-style: none;
+    margin: 0;
+}
+
+.notice-wrap .item {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 14px;
+}
+
+.notice-wrap .item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== Notice Detail (추가) ===== */
+.notice-detail .nd-title {
+    font-size: 16px;
+    color: #222;
+    margin: 0 0 14px;
+}
+
+.notice-detail hr {
+    background: none;
+}
+
+.nd-meta {
+    margin: 0 0 14px;
+    font-size: 16px;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nd-meta .row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'SCDream-Regular', sans-serif;
+}
+
+.nd-meta dt {
+    width: 100px;
+    flex: 0 0 100px;
+    color: #666;
+}
+
+.nd-meta dd {
+    margin: 0;
+    color: #333;
+}
+
+.nd-meta .file dd {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+
+.nd-file {
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nd-subtitle {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #666;
+    font-family: 'SCDream-Regular';
+}
+
+.nd-box {
+    background: #fff;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    padding: 16px;
+    font-size: 16px;
+    font-family: 'SCDream-Regular';
+    color: #333;
+}
+
+.nd-list {
+    margin: 0 0 8px 20px;
+}
+
+.nd-list li+li {
+    margin-top: 6px;
+}
+
+.nd-tail {
+    margin: 24px 0 0;
+}

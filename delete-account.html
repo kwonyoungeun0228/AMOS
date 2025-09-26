@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AMOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/board.css" />
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <!-- 헤더 -->
+        <header class="header-bar">
+            <button class="back" type="button" aria-label="뒤로가기" onclick="location.href='mypage.html'">
+                <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+                    <path d="M15.5 19.5L8 12l7.5-7.5" fill="none" stroke="currentColor" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <h1 class="title">회원 탈퇴</h1>
+        </header>
+
+        <div class="container">
+            <section class="section" aria-labelledby="orderTitle">
+                <h2 id="orderTitle" class="sr-only">회원 정보</h2>
+                <!-- 카테고리 목록 -->
+                <ul class="subcat-list profile-list" role="list">
+                    <li class="item">
+                        <div class="field">
+                            <span class="label">로그인ID</span>
+                            <span class="value">ARUM8484</span>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <div class="field">
+                            <span class="label">비밀번호 입력</span>
+                        </div>
+                        <button class="btn-more" type="button">비밀번호</button>
+
+                    </li>
+                </ul>
+
+
+                    <div class="actions">
+                        <button class="btn btn-primary btn-lg" type="button">회원탈퇴</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
