@@ -1923,6 +1923,8 @@ a {
     background: rgba(0, 0, 0, .05);
 }
 
+
+
 .cart-item .row.sum>div:first-child {
     display: flex;
     justify-content: space-between;
