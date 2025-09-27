@@ -1244,6 +1244,10 @@ a {
     font-size: 12px;
     text-align: center;
     line-height: 18px;
+    vertical-align: middle;
+    background-image: url(../images/icon-new.png); background-size: 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* === 청구서(Bill) === */
@@ -1803,8 +1807,8 @@ a {
 }
 
 .cart-item {
-    /* border-bottom: 1px solid rgba(0, 0, 0, .05); */
-    padding-bottom: 48px;
+    border-bottom: 5px solid rgba(0, 0, 0, .05);
+    padding-bottom: 20px;
 }
 
 .cart-item:last-child {
@@ -1901,20 +1905,29 @@ a {
 }
 
 .cart-item .row.sum {
-    padding: 11px 0px 6px 24px;
+    padding: 5px 0px 6px 24px;
     font-size: 16px;
     font-family: 'SCDream-Medium';
     color: #333;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(0, 0, 0, .09);
+    flex-direction: column;
     margin-top: 5px;
 }
 
+.cart-item .row.sum::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, .05);
+}
+
 .cart-item .row.sum>div:first-child {
-    padding: 0;
-    gap: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .cart-item .row.sum .label {
@@ -2051,7 +2064,7 @@ a {
     padding: 0 16px;
 }
 
-.total-cart{
+.total-cart {
     padding: 0 24px !important;
 }
 
@@ -2319,7 +2332,7 @@ a {
     .rdo {
         font-size: 13px;
         letter-spacing: -1px;
-    } 
+    }
 }
 
 .rdo input {
@@ -2345,7 +2358,9 @@ a {
 }
 
 @media (max-width: 360px) {
-    .rdo .sub{font-size: 12px;}
+    .rdo .sub {
+        font-size: 12px;
+    }
 }
 
 .rdo input:checked+i {
