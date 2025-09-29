@@ -3015,14 +3015,15 @@ a {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: start;
-    gap: 16px;
     align-items: center;
     padding: 16px 0;
     font-family: 'SCDream-Regular';
+    gap: 16px;
 }
 
 .item.is-edit {
     align-items: end;
+    gap: revert;
 }
 
 .profile-list .item:first-child {
@@ -3152,12 +3153,6 @@ a {
     background: #21409A;
 }
 
-.inline-row--tel {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
 .inline-row--tel .inp-tel {
     width: 72px;
     height: 44px;
@@ -3186,4 +3181,62 @@ a {
 
 .inline-grid--addr .btn-zip.small {
     height: 44px;
+}
+
+.inline-edit-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+
+.inline-row--tel {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.inline-row--tel .inp-tel {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.inline-row--tel .hyphen {
+    flex: 0 0 auto;
+    padding: 0 4px;
+    color: #666;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+.item.is-edit .btn-more {
+    display: none;
+}
+
+@media (max-width: 420px) {
+    .inline-edit-wrap {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .inline-row--tel {
+        width: 100%;
+        margin: 0;
+    }
+
+    .edit-actions {
+        width: 100%;
+        justify-content: flex-end;
+        margin-left: 0 !important;
+    }
 }

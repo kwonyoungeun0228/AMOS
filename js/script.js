@@ -531,10 +531,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const bSave = Object.assign(document.createElement('button'), { type: 'button', className: 'btn-save', textContent: '저장' });
     const bCancel = Object.assign(document.createElement('button'), { type: 'button', className: 'btn-cancel', textContent: '취소' });
     act.append(bSave, bCancel);
-    btn.insertAdjacentElement('afterend', act);
 
+    // ✅ 래퍼 안쪽으로 넣어서, CSS로 모바일에서 자동 줄바꿈 되게
+    wrap.append(act);
+
+    field.append(wrap);
+
+    // (선택) 편집 중 '수정' 버튼 숨김
     li.classList.add('is-edit');
-    requestAnimationFrame(() => focusEl?.focus());
+
 
     // 정리
     const cleanup = (apply = false) => {
