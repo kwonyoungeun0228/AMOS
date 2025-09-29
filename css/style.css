@@ -1245,7 +1245,8 @@ a {
     text-align: center;
     line-height: 18px;
     vertical-align: middle;
-    background-image: url(../images/icon-new.png); background-size: 10px 10px;
+    background-image: url(../images/icon-new.png);
+    background-size: 10px 10px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -2866,7 +2867,7 @@ a {
 }
 
 .btn-more {
-    height: 32px;
+    height: 44px;
     padding: 0 10px;
     border: 0;
     border-radius: 4px;
@@ -3020,6 +3021,10 @@ a {
     font-family: 'SCDream-Regular';
 }
 
+.item.is-edit {
+    align-items: end;
+}
+
 .profile-list .item:first-child {
     padding: 0 0 16px;
 }
@@ -3041,4 +3046,144 @@ a {
     color: #999;
     word-break: break-word;
     line-height: 1.4;
+}
+
+.profile-list .item.is-edit .value {
+    display: none;
+}
+
+.inline-edit-wrap {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.inline-edit {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    padding: 0 12px;
+    font-size: 16px;
+    color: #999;
+    font-family: 'SCDream-Regular';
+}
+
+.inline-edit--textarea {
+    min-height: 84px;
+    padding: 10px 12px;
+    resize: vertical;
+}
+
+.profile-list .edit-actions {
+    display: inline-flex;
+    gap: 6px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.profile-list .btn-cancel {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    background: #fff;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-list .btn-save {
+    height: 40px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 4px;
+    background: #21409A;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-list .item.is-edit>.btn-more {
+    display: none;
+}
+
+.inline-edit-wrap {
+    margin-top: 8px;
+}
+
+.inline-edit {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    padding: 0 12px;
+    font-size: 16px;
+}
+
+.inline-edit--textarea {
+    min-height: 100px;
+    padding: 12px;
+    resize: vertical;
+}
+
+.edit-actions {
+    display: inline-flex;
+    gap: 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.edit-actions .btn-save,
+.edit-actions .btn-cancel {
+    height: 44px;
+    padding: 0 12px;
+    border-radius: 4px;
+    border: 1px solid #DCDCDC;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.edit-actions .btn-save {
+    border-color: #21409A;
+    color: #fff;
+    background: #21409A;
+}
+
+.inline-row--tel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.inline-row--tel .inp-tel {
+    width: 72px;
+    height: 44px;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.inline-row--tel .hyphen {
+    color: #999;
+}
+
+.inline-grid--addr {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.inline-grid--addr .addr-zip-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+}
+
+.inline-grid--addr .btn-zip.small {
+    height: 44px;
 }
